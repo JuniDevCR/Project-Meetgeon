@@ -9,13 +9,11 @@ var typed = new Typed("#sub_ti", {
 });
 
 /*canvas shit*/
-
 let canvas = document.getElementById("canvas");
-
-canvas.style.backgroundColor = "lightgray";
-
 let context = canvas.getContext("2d");
 
+canvas.style.backgroundColor = "lightgray";
+context.imageSmoothingEnabled = false; /* Para arreglar el problema que se da en godot tambien xd (pixeles nubosos) */
 /*Secret messages on the console*/
 
 let text_1 = "Welcome to the web Dev how is it going ?";
