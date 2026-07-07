@@ -13,7 +13,10 @@ let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 
 canvas.style.backgroundColor = "lightgray";
-context.imageSmoothingEnabled = false; /* Para arreglar el problema que se da en godot tambien xd (pixeles nubosos) */
+canvas.style.backgroundImage = "url('Front-end/img/space.png')";
+context.imageSmoothingEnabled = false;
+
+/* Para arreglar el problema que se da en godot tambien xd (pixeles nubosos) */
 /*Secret messages on the console*/
 
 let text_1 = "Welcome to the web Dev how is it going ?";

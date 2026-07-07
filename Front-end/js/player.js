@@ -5,44 +5,72 @@ player.onload = function () {
   context.drawImage(player, 0, 0, 100, 100);
 };
 
-// Variables necesarias
 let isPlaying = false;
 let animationId;
 
 let x = 0;
 let y = 0;
-let vx = 0;
-let vy = 0;
+let vx = 0; // Inicia en cero
+let vy = 0; // Inicia en cero
 
-// actualizar el juego
+const speed = 3;
+
+canvas.tabIndex = 1;
+canvas.style.outline = "none";
+
 function update() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  x += vx;
-  y += vy;
+  context.lineWidth = 10;
+  context.strokeStyle = isPlaying ? "#28A745" : "#DC3545";
+  context.strokeRect(0, 0, canvas.width, canvas.height);
+
+  if (isPlaying) {
+    x += vx;
+    y += vy;
+  }
 
   context.drawImage(player, x, y, 100, 100);
-
   animationId = requestAnimationFrame(update);
 }
-// Controlador del boton de start
-const startButton = document.getElementById("start");
-startButton.addEventListener("click", function () {
+
+canvas.addEventListener("click", function () {
+  canvas.focus();
+
   if (!isPlaying) {
     isPlaying = true;
-    startButton.innerText = "Pause";
-
-    cancelAnimationFrame(animationId);
-    update();
+    vx = 0;
+    vy = 0;
   } else {
     isPlaying = false;
-    startButton.innerText = "Continue";
-    cancelAnimationFrame(animationId);
-
     vx = 0;
     vy = 0;
   }
 });
+
+window.addEventListener("keydown", function (event) {
+  if (!isPlaying) return;
+
+  if (event.key.toLowerCase() === "w") vy = -speed;
+  if (event.key.toLowerCase() === "s") vy = speed;
+  if (event.key.toLowerCase() === "a") vx = -speed;
+  if (event.key.toLowerCase() === "d") vx = speed;
+});
+
+// CONTROL DE TECLADO
+window.addEventListener("keyup", function (event) {
+  const key = event.key.toLowerCase();
+  if (key === "w" || key === "s") vy = 0;
+  if (key === "a" || key === "d") vx = 0;
+});
+
+canvas.addEventListener("blur", function () {
+  isPlaying = false;
+  vx = 0;
+  vy = 0;
+});
+
+update();
 
 // Trackeadores de  las teclas
 addEventListener("keydown", function (e) {
