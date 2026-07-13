@@ -1,5 +1,5 @@
 const player = new Image();
-player.src = "/front-end/assets/qwerty.webp";
+player.src = "/docs/assets/qwerty.webp";
 
 player.onload = function () {
   context.drawImage(player, 0, 0, 100, 100);
