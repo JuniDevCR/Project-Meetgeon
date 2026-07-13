@@ -109,10 +109,27 @@
     <!--Main-->
     <main class="container mt-4">
       <h1>Support & Credits</h1>
-      <input type="email" name="email" />
-      <input type="text" name="name" />
-      <textarea name="message"></textarea>
-      <button type="submit">Enviar</button>
+      <input
+        type="hidden"
+        name="_next"
+        value="https://junidevcr.github.io/Project-Meetgeon/"
+      />
+      <!--Forms-->
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Recipient’s username"
+          aria-label="Recipient’s username"
+          aria-describedby="basic-addon2"
+        />
+        <span class="input-group-text" id="basic-addon2">@example.com</span>
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">Comment</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+      <button class="button" type="submit">enviar</button>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
