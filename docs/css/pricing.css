@@ -23,3 +23,60 @@
   text-align: center;
   font-size: 40px;
 }
+
+.card span {
+  font-size: 40px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+}
+
+.features li::before {
+  content: "★";
+  color: gold; /*Cambiar segun el estilo y tal*/
+  margin-right: 8px;
+}
+
+.features li:nth-last-child(-n + 2)::before {
+  content: "✗";
+  color: crimson;
+}
+
+.features_1 {
+  list-style: none;
+  padding: 0;
+}
+
+.features_1 {
+  list-style: none;
+  padding: 0;
+}
+
+.features_1 li::before {
+  content: "☁";
+  color: rgb(93, 220, 255); /*Cambiar segun el estilo y tal*/
+  margin-right: 8px;
+}
+
+.features_1 li:nth-last-child(-n + 2)::before {
+  content: "✗";
+  color: crimson;
+}
+
+.features_2 {
+  list-style: none;
+  padding: 0;
+}
+
+.features_2 {
+  list-style: none;
+  padding: 0;
+}
+
+.features_2 li::before {
+  content: "💼";
+  color: rgb(93, 220, 255); /*Cambiar segun el estilo y tal*/
+  margin-right: 8px;
+}
