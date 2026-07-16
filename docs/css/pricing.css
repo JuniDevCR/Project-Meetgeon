@@ -80,3 +80,147 @@
   color: rgb(93, 220, 255); /*Cambiar segun el estilo y tal*/
   margin-right: 8px;
 }
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+
+  padding: 70px;
+
+  background: #f7f7fb;
+  border-radius: 30px;
+
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.feature-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-image img {
+  width: 220px;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-content h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.feature-content ul {
+  margin: 30px 0;
+  padding-left: 20px;
+}
+
+.feature-content li {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.feature-content a {
+  color: #5a43f3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+footer .button {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  border-radius: var(--border-radius);
+  background: gray;
+  padding: var(--border-gap);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.content {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding: 1.2rem 2rem;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #0d0d12;
+  border-radius: var(--border-radius);
+  width: calc(100% - var(--border-gap));
+  height: calc(100% - var(--border-gap));
+}
+
+.border,
+.neon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.neon {
+  filter: blur(10px);
+  opacity: 0.5;
+}
+
+.gradient {
+  position: absolute;
+  inset: -200px;
+  background: conic-gradient(
+    from 0deg at var(--gradient-pos-x) var(--gradient-pos-y),
+    #1e87ff,
+    #5c13c4,
+    #ff0033,
+    #ffda00,
+    #64bc26,
+    #1e87ff
+  );
+  border-radius: var(--border-radius);
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container1 {
+  position: relative;
+  display: inline-block;
+  padding: 2px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 50px;
+  transition: all 0.4s ease;
+}
+
+.final_part {
+}
