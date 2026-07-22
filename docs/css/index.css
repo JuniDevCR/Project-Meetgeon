@@ -424,3 +424,44 @@ body {
     text-align: center;
   }
 }
+
+.img_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px; /* Espacio con el texto de arriba */
+}
+
+.img_div .call {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+
+  /* Borde arcoíris directo en la imagen */
+  padding: 4px;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8b00ff,
+    #ff0000
+  );
+  background-size: 300% 300%;
+  animation: rainbow-border 4s linear infinite;
+}
+
+@keyframes rainbow-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
