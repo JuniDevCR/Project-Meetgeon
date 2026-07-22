@@ -1,15 +1,95 @@
+/* ===================================
+        MEETGEON HOME CSS
+=================================== */
+
+body {
+  background: #050505;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  background: rgba(20, 20, 20, 0.75) !important;
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #bdbdbd !important;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white !important;
+}
+
+/* ================= BOOTSTRAP BUTTONS ================= */
+
+.btn {
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+}
+
+.btn-outline-primary {
+  border-color: #6366f1;
+
+  color: white;
+}
+
+/* ================= HERO ================= */
+
+#title {
+  text-align: center;
+
+  margin: 90px auto 70px;
+
+  max-width: 1000px;
+}
+
 #title h1 {
   font-size: 60px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
 }
 
 #title p {
+  margin-top: 25px;
+
+  color: #999;
+
   font-size: 25px;
 }
 
+/* Animated text */
+
 #sub_ti {
   font-size: 60px;
-  margin-top: 100px;
-  text-shadow: 20px 10px 20px rgba(175, 157, 157, 0.5);
+
   background: linear-gradient(
     90deg,
     red,
@@ -20,9 +100,11 @@
     blue,
     violet
   );
+
   background-size: 200% 200%;
 
   -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
 
   animation: rainbow 8s linear infinite;
@@ -38,56 +120,81 @@
   }
 }
 
+/* ================= NEON BUTTON ================= */
+
 .button {
   position: relative;
+
   display: inline-block;
+
   border: none;
-  border-radius: var(--border-radius);
+
+  border-radius: 999px;
+
+  padding: 2px;
+
   background: gray;
-  padding: var(--border-gap);
+
   cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 700;
+
+  margin-top: 35px;
 }
 
 .content {
   position: relative;
-  display: inline-flex;
+
+  display: flex;
+
   align-items: center;
+
   justify-content: center;
-  gap: 0.5rem;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+
   padding: 1.2rem 2rem;
-  white-space: nowrap;
-  color: #ffffff;
-  background-color: #0d0d12;
-  border-radius: var(--border-radius);
-  width: calc(100% - var(--border-gap));
-  height: calc(100% - var(--border-gap));
+
+  color: white;
+
+  background: #0d0d12;
+
+  border-radius: 999px;
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
 }
 
 .border,
 .neon {
   position: absolute;
+
   width: 100%;
+
   height: 100%;
+
   top: 0;
+
   left: 0;
+
   overflow: hidden;
-  border-radius: var(--border-radius);
+
+  border-radius: 999px;
 }
 
 .neon {
   filter: blur(10px);
+
   opacity: 0.5;
 }
 
 .gradient {
   position: absolute;
+
   inset: -200px;
+
   background: conic-gradient(
-    from 0deg at var(--gradient-pos-x) var(--gradient-pos-y),
+    from 0deg,
+
     #1e87ff,
     #5c13c4,
     #ff0033,
@@ -95,68 +202,225 @@
     #64bc26,
     #1e87ff
   );
-  border-radius: var(--border-radius);
+
   animation: rotate 4s linear infinite;
 }
 
 @keyframes rotate {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+
+  to {
     transform: rotate(360deg);
   }
 }
 
+/* ================= SECOND BUTTON ================= */
+
 .container1 {
-  position: relative;
   display: inline-block;
+
+  margin-top: 25px;
+
   padding: 2px;
-  background: linear-gradient(135deg, #10b981, #059669);
+
   border-radius: 50px;
-  transition: all 0.4s ease;
+
+  background: linear-gradient(135deg, #10b981, #059669);
 }
 
-/* El otro botonsin*/
-
 .container1 button {
-  font-size: 1.05em;
   padding: 0.7em 1.5em;
-  border-radius: 50px;
+
   border: none;
-  background-color: #0b0f19;
+
+  border-radius: 50px;
+
+  background: #0b0f19;
+
   color: #e2e8f0;
-  cursor: pointer;
-  white-space: nowrap;
+
   font-weight: 500;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: color 0.3s ease;
+
+  cursor: pointer;
 }
 
 .container1:hover button {
-  color: #ffffff;
+  color: white;
 }
 
-.container1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+/* ================= FEATURE SECTIONS ================= */
+
+.feature-card,
+.hero-feature,
+.demo-section {
+  margin-top: 80px;
+
+  padding: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 50px;
+
+  background: rgba(20, 20, 20, 0.75);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 30px;
+
+  transition: 0.35s;
+}
+
+.feature-card:hover,
+.hero-feature:hover,
+.demo-section:hover {
+  transform: translateY(-5px);
+
+  border-color: #6366f1;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.feature-content h2,
+.demo-section h2 {
+  font-size: 2.3rem;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.feature-content p,
+.demo-section p {
+  color: #aaa;
+
+  line-height: 1.8;
+
+  font-size: 1.1rem;
+}
+
+.feature-image img {
+  width: 200px;
+
+  filter: drop-shadow(0 20px 40px rgba(124, 58, 237, 0.4));
+}
+
+/* ================= CANVAS ================= */
+
+.demo-section {
+  flex-direction: column;
+
+  text-align: center;
+}
+
+#canvas {
+  margin-top: 30px;
+
+  max-width: 100%;
+
+  border-radius: 20px;
+
+  background: #080808;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  margin-top: 100px;
+
+  background: linear-gradient(180deg, #080808, #020202);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  max-width: 1200px;
+
   margin: auto;
-  border-radius: 50px;
-  z-index: -10;
-  filter: blur(0);
-  transition: filter 0.4s ease;
+
+  padding: 60px 30px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 40px;
 }
 
-.container1:hover::before {
-  background: linear-gradient(
-    135deg,
-    #34d399,
-    #10b981
-  ); /* Glow en tonos verde menta */
-  filter: blur(1em);
+.footer h2 {
+  font-size: 2rem;
+
+  font-weight: 800;
 }
 
-.container1:active::before {
-  filter: blur(0.3em);
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+.footer a {
+  display: block;
+
+  color: #aaa;
+
+  text-decoration: none;
+
+  margin: 10px 0;
+
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: white;
+
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  text-align: center;
+
+  padding: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #777;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  #title h1,
+  #sub_ti {
+    font-size: 40px;
+  }
+
+  #title p {
+    font-size: 18px;
+  }
+
+  .feature-card,
+  .hero-feature,
+  .demo-section {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 30px;
+  }
+
+  .feature-image img {
+    width: 140px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+
+    text-align: center;
+  }
 }
