@@ -82,8 +82,6 @@ Future repositories will include the backend, frontend application, infrastructu
 
 ![Resources](./docs/images/Credits.png)
 
-> *(Replace these images with actual screenshots from your project.)*
-
 ---
 
 ## 🤝 Contributing
