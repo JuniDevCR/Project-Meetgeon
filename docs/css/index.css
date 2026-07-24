@@ -1,14 +1,10 @@
-/* ===================================
-        MEETGEON HOME CSS
-=================================== */
-
 body {
   background: #050505;
   color: #ffffff;
   font-family: "Inter", sans-serif;
 }
 
-/* ================= NAVBAR ================= */
+/*Navbar*/
 
 .navbar {
   background: rgba(20, 20, 20, 0.75) !important;
@@ -34,7 +30,7 @@ body {
   color: white !important;
 }
 
-/* ================= BOOTSTRAP BUTTONS ================= */
+/*Boostrap buttons*/
 
 .btn {
   border-radius: 12px;
@@ -59,7 +55,7 @@ body {
   color: white;
 }
 
-/* ================= HERO ================= */
+/*Hero*/
 
 #title {
   text-align: center;
@@ -120,7 +116,7 @@ body {
   }
 }
 
-/* ================= NEON BUTTON ================= */
+/*Neon button*/
 
 .button {
   position: relative;
@@ -216,7 +212,7 @@ body {
   }
 }
 
-/* ================= SECOND BUTTON ================= */
+/*Another button*/
 
 .container1 {
   display: inline-block;
@@ -250,7 +246,7 @@ body {
   color: white;
 }
 
-/* ================= FEATURE SECTIONS ================= */
+/*Feature sections*/
 
 .feature-card,
 .hero-feature,
@@ -310,7 +306,7 @@ body {
   filter: drop-shadow(0 20px 40px rgba(124, 58, 237, 0.4));
 }
 
-/* ================= CANVAS ================= */
+/*Canvas*/
 
 .demo-section {
   flex-direction: column;
@@ -330,7 +326,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ================= FOOTER ================= */
+/*Footer*/
 
 .footer {
   margin-top: 100px;
@@ -392,7 +388,7 @@ body {
   color: #777;
 }
 
-/* ================= MOBILE ================= */
+/*Mobile*/
 
 @media (max-width: 768px) {
   #title h1,
@@ -424,6 +420,8 @@ body {
     text-align: center;
   }
 }
+
+/*Image in card*/
 
 .img_div {
   display: flex;
@@ -465,3 +463,5 @@ body {
     background-position: 0% 50%;
   }
 }
+
+/*Css completamente echo con Ia no tuve tiempo xd pero ta lindo*/
