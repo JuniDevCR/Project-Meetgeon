@@ -1,11 +1,11 @@
 /*typed.js*/
 var typed = new Typed("#sub_ti", {
   strings: ['"Nest"', '"Home"', '"Space"'],
-  typeSpeed: 50, // Velocidad al escribir
-  backSpeed: 50, // Velocidad al borrar
-  smartBackspace: true, // ¡Esta es la clave! Solo borrará la última palabra
-  backDelay: 1500, // Tiempo que se queda la palabra fija antes de borrarse (1.5 segundos)
-  loop: true, // Para que se repita infinitamente
+  typeSpeed: 50,
+  backSpeed: 50,
+  smartBackspace: true,
+  backDelay: 1500,
+  loop: true,
 });
 
 /*canvas shit*/
@@ -16,7 +16,6 @@ canvas.style.backgroundColor = "lightgray";
 canvas.style.backgroundImage = "url('Front-end/img/space.png')";
 context.imageSmoothingEnabled = false;
 
-/* Para arreglar el problema que se da en godot tambien xd (pixeles nubosos) */
 /*Secret messages on the console*/
 
 let text_1 = "Welcome to the web Dev how is it going ?";
@@ -47,14 +46,3 @@ button.addEventListener("mouseout", () => {
   root.style.setProperty("--gradient-pos-x", `50%`);
   root.style.setProperty("--gradient-pos-y", `50%`);
 });
-
-/*Comandos nuevos
-let = es para crear variables como piton
-console.log = es como el print de piton
-promt = print xd
-if & else = funcionan literal igual pero se pone {}pa ver donde empieza o termina
-function = es para crear funciones y se pueden invocar cuando uno quiera
-const = es como let pero no se puede cambiar el valor de la variable es constante xd
-[] = es para crear listas
-
-*/

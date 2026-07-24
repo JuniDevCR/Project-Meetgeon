@@ -10,8 +10,8 @@ let animationId;
 
 let x = 0;
 let y = 0;
-let vx = 0; // Inicia en cero
-let vy = 0; // Inicia en cero
+let vx = 0;
+let vy = 0;
 
 const speed = 3;
 
@@ -57,7 +57,7 @@ window.addEventListener("keydown", function (event) {
   if (event.key.toLowerCase() === "d") vx = speed;
 });
 
-// CONTROL DE TECLADO
+// Keyboard control
 window.addEventListener("keyup", function (event) {
   const key = event.key.toLowerCase();
   if (key === "w" || key === "s") vy = 0;
@@ -72,14 +72,14 @@ canvas.addEventListener("blur", function () {
 
 update();
 
-// Trackeadores de  las teclas
+// Keys tracks
 addEventListener("keydown", function (e) {
   if (!isPlaying) return;
 
   if (e.code == "KeyD") vx = 5;
   if (e.code == "KeyA") vx = -5;
-  if (e.code == "KeyW") vy = -5; // Restar en Y sube al personaje
-  if (e.code == "KeyS") vy = 5; // Sumar en Y baja al personaje
+  if (e.code == "KeyW") vy = -5;
+  if (e.code == "KeyS") vy = 5;
 });
 
 addEventListener("keyup", function (e) {
